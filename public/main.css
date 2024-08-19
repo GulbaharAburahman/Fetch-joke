@@ -1,0 +1,65 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+
+#joke-container{
+    font-size: larger;
+    text-align: center;
+    background-color: rgb(140, 171, 149);
+    padding:30px;
+    border-radius: 10px;
+    
+}
+
+ select, input {
+   font-size: larger;
+    margin: 10px;
+    padding:5px;
+   border-radius: 5px;
+   border:none
+}
+   
+
+button{
+    padding: 10px 20px;
+    background-color: rgb(14, 179, 229);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: larger;
+}
+
+button:hover{
+    background-color: blue;
+}
+
+label{
+font-size: larger;
+vertical-align: middle;
+display: flex;
+align-items: center;
+margin-bottom: 5px;
+}
+
+
+input[type="checkbox"] {
+    margin-right:10px ;  /* Add some space between the checkbox and label */
+    width: 20px;
+    height: 20px;
+    transform: scale(1.5);  /* Scale up the checkbox */
+    vertical-align: middle;  /* Align the checkbox vertically with the label */
+}
+
+p{
+    margin-top: 20px;
+    font-size: larger;
+    line-height: 1.5;
+    background-color: rgb(135, 200, 222);
+}

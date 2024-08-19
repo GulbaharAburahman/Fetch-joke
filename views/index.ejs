@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="/main.css">
+    <title>Give Joke App</title>
+</head>
+<body>
+    <div id="joke-container">
+        <h1>Get a Joke</h1>
+ <form action="/get-joke" method="POST">
+ <label for="category">Choose a category:</label>
+ <select id="category" name="category">
+    <option value="Any" selected>Any</option>>
+    <option value="Programming">Programming</option>
+    <option value="Misc">Miscellaneous</option>
+    <option value="Dark">Dark</option>
+    <option value="Pun">Pun</option>
+    <option value="Spooky">Spooky</option>
+    <option value="Christmas">Christmas</option>
+ </select>
+
+<label for="language">Choose a language:</label>
+<select id="language" name="language">
+    <option value="en" selected>English</option>
+    <option value="de">German</option>
+    <option value="es">Spanish</option>
+    <option value="fr">French</option>
+</select>
+
+   <br><br>
+
+<label>Blacklist Flags:</label>
+<div>
+    <label><input type="checkbox" name="blacklistFlags" value="nsfw">NSFW</label>
+    <label><input type="checkbox" name="blacklistFlags" value="religious">Religious</label>
+    <label><input type="checkbox" name="blacklistFlags" value="political">Political</label>
+    <label><input type="checkbox" name="blacklistFlags" value="rasict">Rasict</label>
+    <label><input type="checkbox" name="blacklistFlags" value="sexist">Sexist</label>
+    <label><input type="checkbox" name="blacklistFlags" value="explicit">Explicit</label>
+</div>
+
+<br>
+<label for="amount">Number of jokes:</label>
+<input type="number" id="amount"  name="amount" min="1" max="10" value="1">
+
+<button type="submit" >Give Joke</button>
+</form>
+
+<%if(joke) { %>
+<p>🤭<%-joke%>🤭</p>
+<%} else if(error) {%>
+<p><%=error%></p>
+<%}%>
+
+</div>
+    
+</body>
+</html>
